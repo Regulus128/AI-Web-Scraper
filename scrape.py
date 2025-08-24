@@ -14,8 +14,6 @@ def scrape_website(website):
         driver.get(website)
         print("Page loaded successfully.")
         html = driver.page_source
-        time.sleep(5)
-
         return html
     
     finally:
@@ -39,3 +37,5 @@ def clean_body_content(body):
 
 def split_dom_content(dom_content, chunk_size=6000):
     return [dom_content[i:i + chunk_size] for i in range(0, len(dom_content), chunk_size)]
+
+
